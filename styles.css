@@ -1,0 +1,82 @@
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: cursive;
+  background: wheat;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+.item1 { grid-area: header; }
+.item2 { grid-area: one;}
+.item3 { grid-area: two;}
+.item4 { grid-area: left; background: rgb(173, 158, 139); border-radius: 20px;}
+.item5 { grid-area: right; background: rgb(173, 158, 139); border-radius: 20px;}
+.item6 { grid-area: footer; margin: 20px;}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header'
+    'one two'
+    'left right'
+    'footer footer';
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  padding: 10px;
+}
+
+.grid-container > div {
+  padding: 0px;
+}
+
+#nav {
+  justify-content: center;
+  align-items: top;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#nav > div {
+  font-size: small;
+  font-family: cursive;
+  text-align: center;     
+  color: bisque;
+  background: rgb(106, 56, 38);
+  border-radius: 10px 10px 0px 0px;
+  width: 100px;
+  padding: 3px;
+  margin: 0px 3px 3px 3px;
+}
+#nav > div:hover{
+  background: rgb(191, 160, 149);
+}
+
+.show {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: top;
+  border-radius: 20px;
+}
+
+.show > div {
+  background: rgb(78, 57, 30);  
+  color: #fff;   
+  width: 150px;    
+  padding: 5px;
+  margin: 5px;
+  border-radius: 22px 50px;
+}
+
+.show > div a {
+  color: aliceblue;
+}
+
+#showPicked > div:hover{
+  background: rgb(191, 160, 149);
+}
